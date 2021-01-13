@@ -2,21 +2,24 @@ package strategydesignpattern;
 
 public class Receiver extends Player{
 
-    Receiver(String name) {
+    Receiver(String name)
+    {
         super(name);
-        // TODO Auto-generated constructor stub
+        setDefenceBehavior();
+        setOffenseBehavior();
     }
 
     @Override
-    public void setDefenceBehavior() {
-        // TODO Auto-generated method stub
-
+    public void setDefenceBehavior()
+    {
+        this.defenceBehavior = null;
     }
 
     @Override
-    public void setOffenseBehavior() {
-        // TODO Auto-generated method stub
-
+    public void setOffenseBehavior()
+    {
+        ReceiveBehavior receiveBehavior = new ReceiveBehavior();
+        this.offenceBehavior = receiveBehavior;
     }
 
 }

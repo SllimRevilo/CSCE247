@@ -9,6 +9,7 @@ public abstract class Player {
     Player(String name)
     {
         this.name = name;
+        defence = true;
     }
 
     public abstract void setDefenceBehavior();
@@ -17,11 +18,18 @@ public abstract class Player {
 
     public String play()
     {
-
+        if(defence)
+        {
+            return defenceBehavior.play();
+        }
+        else
+        {
+            return offenceBehavior.play();
+        }
     }
 
     public void turnover()
     {
-        
+        defence  = !defence;
     }
 }
