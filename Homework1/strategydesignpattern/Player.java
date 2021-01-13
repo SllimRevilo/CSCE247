@@ -9,7 +9,7 @@ public abstract class Player {
     Player(String name)
     {
         this.name = name;
-        defence = true;
+        defence = false;
     }
 
     public abstract void setDefenceBehavior();
@@ -20,11 +20,25 @@ public abstract class Player {
     {
         if(defence)
         {
-            return defenceBehavior.play();
+            if(defenceBehavior == null)
+            {
+                return "not playing";
+            }
+            else
+            {
+                return defenceBehavior.play();
+            }
         }
         else
         {
-            return offenceBehavior.play();
+            if(offenceBehavior == null)
+            {
+                return "not playing";
+            }
+            else
+            {
+                return offenceBehavior.play();
+            }
         }
     }
 
