@@ -17,6 +17,6 @@ public class Lineman extends Player{
 	public void setOffenseBehavior() {
 		// TODO Auto-generated method stub
 		
-	}}
+	}
 
 }
