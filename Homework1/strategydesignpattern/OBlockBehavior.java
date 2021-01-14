@@ -7,7 +7,7 @@ package strategydesignpattern;
 public class OBlockBehavior implements OffenceBehavior {
 
     /**
-     * returns a string block defenders
+     * @return returns a string block defenders
      */
     public String play()
     {

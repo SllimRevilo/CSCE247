@@ -3,12 +3,13 @@ package strategydesignpattern;
 import java.util.Random;
 
 /**
- * receive behavior is an offencive behavior
+ * Receive behavior is an offencive behavior
+ * @author Oliver Mills
  */
 public class ReceiveBehavior implements OffenceBehavior {
 
     /**
-     * returns 1 of 5 random strings for the play
+     * @return returns 1 of 5 random strings for the play
      */
     public String play()
     {

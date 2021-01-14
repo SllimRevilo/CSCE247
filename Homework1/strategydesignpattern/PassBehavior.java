@@ -9,7 +9,7 @@ import java.util.Random;
 public class PassBehavior implements OffenceBehavior {
 
     /**
-     * returns 1 of 4 random strings for the play
+     * @return returns 1 of 4 random strings for the play
      */
     public String play()
     {

@@ -7,7 +7,7 @@ package strategydesignpattern;
 public class SackBehavior implements DefenceBehavior {
 
     /**
-     * returns the string sack the quarterback for the play
+     * @return returns the string sack the quarterback for the play
      */
     public String play()
     {
