@@ -2,8 +2,16 @@ package strategydesignpattern;
 
 import java.util.Random;
 
+/**
+ * Creates a Lineman player for the project
+ * @author Oliver Mills
+ */
 public class Lineman extends Player {
 
+    /**
+     * Creates a lineman with correct behaviors
+     * @param name the name of the player
+     */
     Lineman(String name)
     {
         super(name);
@@ -11,7 +19,9 @@ public class Lineman extends Player {
         setOffenseBehavior();
 	}
 
-	@Override
+	/**
+     * Randomly chooses between 2 behaviors for the defencive behavior
+     */
     public void setDefenceBehavior()
     {
         int numChoices = 2;
@@ -40,7 +50,9 @@ public class Lineman extends Player {
         }
 	}
 
-	@Override
+	/**
+     * sets the offencive behavior to the oblock behavior
+     */
     public void setOffenseBehavior()
     {
         OBlockBehavior oBlockBehavior = new OBlockBehavior();

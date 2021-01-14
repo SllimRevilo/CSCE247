@@ -2,7 +2,15 @@ package strategydesignpattern;
 
 import java.util.Random;
 
+/**
+ * Pass behavior is an offencive behavior 
+ * @author Oliver Mills
+ */
 public class PassBehavior implements OffenceBehavior {
+
+    /**
+     * returns 1 of 4 random strings for the play
+     */
     public String play()
     {
         String ret = "";

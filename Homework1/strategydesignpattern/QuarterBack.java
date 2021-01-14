@@ -2,7 +2,16 @@ package strategydesignpattern;
 
 import java.util.Random;
 
+/**
+ * Makes a quarterback which is an extension of the player
+ * @author Oliver Mills
+ */
 public class QuarterBack extends Player {
+    
+    /**
+     * Creates a quarterback with correct behaviors
+     * @param name the name of the player
+     */
     QuarterBack(String name)
     {
         super(name);
@@ -10,13 +19,17 @@ public class QuarterBack extends Player {
         setOffenseBehavior();
     }
 
-    @Override
+    /**
+     * sets the defence behavior to null
+     */
     public void setDefenceBehavior()
     {
         this.defenceBehavior = null;
     }
 
-    @Override
+    /**
+     * sets the offence behavior to 1 of 2 random behaviors
+     */
     public void setOffenseBehavior()
     {
         int numChoices = 2;
@@ -39,5 +52,4 @@ public class QuarterBack extends Player {
             this.offenceBehavior = null; 
         }
     }
-
 }

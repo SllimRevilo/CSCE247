@@ -2,7 +2,15 @@ package strategydesignpattern;
 
 import java.util.Random;
 
+/**
+ * The run behavior is an offensive behavior
+ * @author Oliver Mills
+ */
 public class RunBehavior implements OffenceBehavior {
+
+    /**
+     * returns 1 of 4 different strings for the play
+     */
     public String play()
     {
         String ret = "";

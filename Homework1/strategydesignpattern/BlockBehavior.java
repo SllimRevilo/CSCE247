@@ -2,7 +2,15 @@ package strategydesignpattern;
 
 import java.util.Random;
 
+/**
+ * block behavior is a defence behavior
+ * @author Oliver Mills
+ */
 public class BlockBehavior implements DefenceBehavior {
+
+    /**
+     * returns 1 of 4 random strings for the behavior
+     */
     public String play()
     {
         String ret = "";
