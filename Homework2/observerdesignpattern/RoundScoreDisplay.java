@@ -1,6 +1,8 @@
 package observerdesignpattern;
 
-public class RoundScoreDisplay {
+import java.util.Observer;
+
+public class RoundScoreDisplay implements Observer{
     private Subject golfer;
     private int strokesTotal;
     private int parTotal;
@@ -17,6 +19,6 @@ public class RoundScoreDisplay {
 
     private void displayRoundScore()
     {
-        
+
     }
 }
