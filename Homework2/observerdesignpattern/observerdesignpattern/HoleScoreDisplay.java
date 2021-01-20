@@ -1,13 +1,11 @@
 package observerdesignpattern;
 
-import java.util.Observer;
-
-public class RoundScoreDisplay implements Observer{
+public class HoleScoreDisplay implements Observer{
     private Subject golfer;
-    private int strokesTotal;
-    private int parTotal;
+    private int strokes;
+    private int par;
 
-    public RoundScoreDisplay(Subject golfer)
+    public HoleScoreDisplay(Subject golfer)
     {
         this.golfer = golfer;
         this.strokes = 0;
@@ -16,12 +14,12 @@ public class RoundScoreDisplay implements Observer{
 
     public void update(int strokes, int par)
     {
-        this.strokes += strokes;
-        this.par += par;
+        this.strokes = strokes;
+        this.par = par;
         displayCurrentScore();
     }
 
-    private void displayRoundScore()
+    private void displayCurrentScore()
     {
         System.out.println("Current Hole Stats\nPar: " + this.par + "\nStrokes: " + this.strokes);
         if(this.strokes > this.par)
