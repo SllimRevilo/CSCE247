@@ -8,6 +8,7 @@ public class HoleScoreDisplay implements Observer{
     public HoleScoreDisplay(Subject golfer)
     {
         this.golfer = golfer;
+        this.golfer.registerObserver(this);
         this.strokes = 0;
         this.par = 0;
     }

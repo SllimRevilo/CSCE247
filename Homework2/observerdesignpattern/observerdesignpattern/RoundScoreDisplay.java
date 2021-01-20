@@ -8,6 +8,7 @@ public class RoundScoreDisplay implements Observer{
     public RoundScoreDisplay(Subject golfer)
     {
         this.golfer = golfer;
+        this.golfer.registerObserver(this);
         this.strokesTotal = 0;
         this.parTotal = 0;
     }

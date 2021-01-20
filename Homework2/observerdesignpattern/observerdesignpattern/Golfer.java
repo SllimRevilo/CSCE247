@@ -3,7 +3,7 @@ package observerdesignpattern;
 import java.util.ArrayList;
 
 public class Golfer implements Subject{
-    private ArrayList observers;
+    private ArrayList<Observer> observers;
     private String name;
 
     Golfer(String name)
