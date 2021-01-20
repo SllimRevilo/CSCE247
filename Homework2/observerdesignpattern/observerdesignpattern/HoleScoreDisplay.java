@@ -22,7 +22,7 @@ public class HoleScoreDisplay implements Observer{
 
     private void displayCurrentScore()
     {
-        System.out.println("Current Hole Stats\nPar: " + this.par + "\nStrokes: " + this.strokes);
+        System.out.println("\nCurrent Hole Stats\nPar: " + this.par + "\nStrokes: " + this.strokes);
         if(this.strokes > this.par)
         {
             System.out.println(this.strokes - this.par + " over par");

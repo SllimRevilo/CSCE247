@@ -3,7 +3,7 @@ package observerdesignpattern;
 import java.util.ArrayList;
 
 public class Golfer implements Subject{
-    private ArrayList<Observer> observers;
+    private ArrayList<Observer> observers = new ArrayList<Observer>();
     private String name;
 
     Golfer(String name)
@@ -13,12 +13,12 @@ public class Golfer implements Subject{
 
     public void registerObserver(Observer observer)
     {
-        observers.add(observer);
+        this.observers.add(observer);
     }
 
     public void removeObserver(Observer observer)
     {
-        observers.remove(observer);
+        this.observers.remove(observer);
     }
 
     public void notifyObservers(int strokes, int par)

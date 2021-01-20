@@ -21,7 +21,7 @@ public class RoundScoreDisplay implements Observer{
     }
 
     private void displayRoundScore() {
-        System.out.println("Current Hole Stats\nPar: " + this.parTotal + "\nStrokes: " + this.strokesTotal);
+        System.out.println("\nCurrent Round Stats\nPar: " + this.parTotal + "\nStrokes: " + this.strokesTotal);
         if (this.strokesTotal > this.parTotal) {
             System.out.println(this.strokesTotal - this.parTotal + " over par");
         } else if (this.strokesTotal < this.parTotal) {
