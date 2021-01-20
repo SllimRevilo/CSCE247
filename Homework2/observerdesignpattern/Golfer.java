@@ -31,10 +31,7 @@ public class Golfer implements Subject{
 
     public void enterScore(int strokes, int par)
     {
-        for(Observer i: observers)
-        {
-            i.update(strokes, par);
-        }
+       notifyObservers(strokes, par);
     }
 
     public String getName()
