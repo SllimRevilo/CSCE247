@@ -5,16 +5,16 @@ public class Rims extends VehicleDecorator{
 
     public Rims(Vehicle vehicle)
     {
-
+        this.vehicle = vehicle;
     }
 
     public String toString()
     {
-
+        return this.vehicle.toString() + ", cool rims";
     }
 
     public double getCost()
     {
-        
+        return this.vehicle.getCost() + 200;
     }
 }

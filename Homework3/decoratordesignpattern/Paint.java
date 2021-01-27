@@ -5,16 +5,16 @@ public class Paint extends VehicleDecorator{
 
     public Paint(Vehicle vehicle)
     {
-
+        this.vehicle = vehicle;
     }
 
     public String toString()
     {
-
+        return this.vehicle.toString() + ", fancy paint";
     }
 
     public double getCost()
     {
-        
+        return this.vehicle.getCost() + 150;
     }
 }

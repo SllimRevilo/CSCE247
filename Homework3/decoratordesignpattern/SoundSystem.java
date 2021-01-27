@@ -5,16 +5,16 @@ public class SoundSystem extends VehicleDecorator{
 
     public SoundSystem(Vehicle vehicle)
     {
-
+        this.vehicle = vehicle;
     }
 
     public String toString()
     {
-
+        return this.vehicle.toString() + ", awesome sound";
     }
 
     public double getCost()
     {
-        
+        return this.vehicle.getCost() + 350;
     }
 }
