@@ -1,6 +1,6 @@
 package factorydesignpattern;
 
-public class BikeStoreDriver {
+public class BikeStore {
 
 	public void runBikeStore() {
 		BikeStore bikeStore = new BikeStore();
@@ -19,4 +19,13 @@ public class BikeStoreDriver {
 		driver.runBikeStore();
 	}
 
+	public Bike orderBike(String type)
+	{
+
+	}
+
+	private Bike createBike(String type)
+	{
+		
+	}
 }
