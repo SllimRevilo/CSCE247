@@ -27,5 +27,6 @@ public class BikeStore {
             return null;
         }
         ret.createBike();
+        return ret;
 	}
 }

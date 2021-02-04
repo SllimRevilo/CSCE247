@@ -12,6 +12,7 @@ public abstract class Bike {
         this.createFrame();
         this.addWheels();
         this.addPedals();
+        this.getPrice();
     }
 
     private void createFrame()
@@ -39,8 +40,8 @@ public abstract class Bike {
         }
     }
 
-    public double getPrice()
+    public void getPrice()
     {
-        return this.price;
+        System.out.println("Price: $" + this.price);
     }
 }
