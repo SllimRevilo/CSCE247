@@ -1,4 +1,4 @@
-package CSCE247.Homework4;
+package factorydesignpattern;
 
 public abstract class Bike {
     protected String name;
@@ -9,22 +9,34 @@ public abstract class Bike {
 
     public void createBike()
     {
-
+        this.createFrame();
+        this.addWheels();
+        this.addPedals();
     }
 
     private void createFrame()
     {
-
+        System.out.println("Assembling " + this.name + " frame");
     }
 
     private void addWheels()
     {
-
+        if(this.numWheels > 0)
+        {
+            System.out.println("Adding " + this.numWheels + " wheels");
+            if(hasTrainingWheels)
+            {
+                System.out.println("Adding training wheels");
+            }
+        }
     }
 
     private void addPedals()
     {
-
+        if(hasPeddals)
+        {
+            System.out.println("Adding pedals");
+        }
     }
 
     public double getPrice()

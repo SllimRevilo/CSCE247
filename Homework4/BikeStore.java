@@ -1,31 +1,31 @@
 package factorydesignpattern;
 
 public class BikeStore {
-
-	public void runBikeStore() {
-		BikeStore bikeStore = new BikeStore();
-		
-		Bike tricycle = bikeStore.orderBike("tricycle");
-		System.out.println("\n-----------------------------------\n");
-		
-		Bike strider = bikeStore.orderBike("strider");
-		System.out.println("\n-----------------------------------\n");
-		
-		Bike kidsBike = bikeStore.orderBike("kids bike");
-		System.out.println("\n-----------------------------------\n");
-	}
-	public static void main(String[] args) {
-		BikeStoreDriver driver = new BikeStoreDriver();
-		driver.runBikeStore();
-	}
-
-	public Bike orderBike(String type)
+    public Bike orderBike(String type)
 	{
-
+        return createBike(type);
 	}
 
 	private Bike createBike(String type)
 	{
-		
+        Bike ret;
+        if(type.equals("tricycle"))
+        {
+            ret = new Tricycle();
+        }
+        else if(type.equals("strider"))
+        {
+            ret = new Strider();
+        }
+        else if(type.equals("kids bike"))
+        {
+            ret = new KidsBike();
+        }
+        else
+        {
+            System.out.println("invalid bike type");
+            return null;
+        }
+        ret.createBike();
 	}
 }
