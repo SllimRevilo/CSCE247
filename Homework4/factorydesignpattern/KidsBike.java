@@ -1,7 +1,14 @@
 package factorydesignpattern;
 
+/**
+ * sets defaults of a kids bike
+ * @author @sllimrevilo
+ */
 public class KidsBike extends Bike
 {
+    /**
+     * makes a kids bike
+     */
     KidsBike()
     {
         this.name = "kids bike";
