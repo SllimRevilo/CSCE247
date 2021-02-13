@@ -13,7 +13,12 @@ public class WishList {
 
     public void addItem(String title, String description, double price)
     {
-
+        if(items.length >= count)
+        {
+            this.items = growArray(this.items);
+        }
+        this.items[count] = new Item(title, description, price);
+        count++;
     }
 
     public Iterator<WishListIterator> createIterator()
@@ -37,7 +42,8 @@ public class WishList {
         Item[] newArray = new Item[size*2];
         for(int i = 0; i < count; i++)
         {
-            price += items[i];
+            newArray[i] = items[i];
         }
+        return newArray;
     }
 }
