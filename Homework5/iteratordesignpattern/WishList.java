@@ -1,5 +1,7 @@
 package iteratordesignpattern;
 
+import java.util.Iterator;
+
 public class WishList {
     private String name;
     private Item[] items;
@@ -21,7 +23,7 @@ public class WishList {
         count++;
     }
 
-    public Iterator<WishListIterator> createIterator()
+    public WishListIterator createIterator()
     {
         return new WishListIterator(items);
     }
@@ -31,14 +33,14 @@ public class WishList {
         double price = 0;
         for(int i = 0; i < count; i++)
         {
-            price += items[i];
+            price += items[i].getPrice();
         }
         return price;
     }
 
     private Item[] growArray(Item[] items)
     {
-        size = items.length;
+        int size = items.length;
         Item[] newArray = new Item[size*2];
         for(int i = 0; i < count; i++)
         {
