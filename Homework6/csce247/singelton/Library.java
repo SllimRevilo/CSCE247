@@ -22,7 +22,12 @@ public class Library {
     {
         if(books.containsKey(bookName))
         {
-            books.get(bookName);
+            if(books.get(bookName) <= 0)
+            {
+                System.out.println("Sorry. " + bookName + " is not in stock");
+            return false;
+            }
+            books.put(bookName, books.get(bookName)-1);
             System.out.println(bookName + " was successfully checked out");
             return true;
         }
