@@ -40,6 +40,6 @@ public class BlockBehavior implements DefenceBehavior {
             ret = "error";
         }
 
-        return "block a " + ret;
+        return "block a " + ret; 
     }
 }
