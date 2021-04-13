@@ -1,4 +1,4 @@
-package csce247.assignments.state;
+package CSCE247.Homework7;
 
 public class TVDriver {
 
