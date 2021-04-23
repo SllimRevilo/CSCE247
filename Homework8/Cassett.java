@@ -1,3 +1,4 @@
+package CSCE247.Homework8;
 import java.util.ArrayList;
 
 /**
@@ -39,7 +40,7 @@ public class Cassett implements AnalogAlbum {
         }
         else
         {
-            return "Playing song " + currentIndex + "; " + songs.get(currentIndex);
+            return "Playing song " + currentIndex + ": " + songs.get(currentIndex);
         }
     }
 
@@ -81,6 +82,7 @@ public class Cassett implements AnalogAlbum {
             {
                 return "Forwarding to song " + songs.get(currentIndex);
             }
+        }
     }
 
     /**
