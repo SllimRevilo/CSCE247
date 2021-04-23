@@ -1,5 +1,10 @@
 package CSCE247.Homework8;
 import java.util.ArrayList;
+
+/**
+ * implements all the functions of a Digital album in order to use a CD
+ * @author @SllimRevilo
+ */
 public class CD implements DigitalAlbum {
     private ArrayList<String> songs;
     private int currentIndex;
@@ -42,6 +47,7 @@ public class CD implements DigitalAlbum {
     {
         if(num >=0 && num < songs.size())
         {
+            currentIndex = num +1;
             return "Playing " + num + ": " + songs.get(num);
         }
         else
@@ -56,15 +62,15 @@ public class CD implements DigitalAlbum {
      */
     public String nextSong()
     {
+
         if(currentIndex >= songs.size())
         {
-            currentIndex =0;
+            currentIndex--;
         }
-        else
-        {
-            ++currentIndex;
-        }
-        return "Playing " + currentIndex + ": " + songs.get(currentIndex);
+        String ret = "Playing " + (currentIndex+1) + ": " + songs.get(currentIndex);
+        ++currentIndex;
+
+        return ret;
     }
 
     /**
@@ -73,12 +79,17 @@ public class CD implements DigitalAlbum {
      */
     public String prevSong()
     {
+        if(currentIndex >= songs.size())
+        {
+            currentIndex = songs.size()-1;
+        }
         if(currentIndex > 0)
         {
             --currentIndex;
         }
+        
 
-        return "Skipping back and playing " + currentIndex + ": " + songs.get(currentIndex);
+        return "Skipping back and playing: " + songs.get(currentIndex);
     }
 
     /**

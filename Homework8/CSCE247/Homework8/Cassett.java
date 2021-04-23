@@ -40,7 +40,8 @@ public class Cassett implements AnalogAlbum {
         }
         else
         {
-            return "Playing song " + currentIndex + ": " + songs.get(currentIndex);
+            ++currentIndex;
+            return "Playing song " + (currentIndex) + ": " + songs.get(currentIndex-1);
         }
     }
 
