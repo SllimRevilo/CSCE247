@@ -63,14 +63,12 @@ public class CD implements DigitalAlbum {
     public String nextSong()
     {
 
-        if(currentIndex >= songs.size())
+        if(currentIndex > songs.size())
         {
-            currentIndex--;
+            currentIndex =0;
         }
-        String ret = "Playing " + (currentIndex+1) + ": " + songs.get(currentIndex);
         ++currentIndex;
-
-        return ret;
+        return "Playing " + (currentIndex) + ": " + songs.get(currentIndex-1);
     }
 
     /**
@@ -79,17 +77,11 @@ public class CD implements DigitalAlbum {
      */
     public String prevSong()
     {
-        if(currentIndex >= songs.size())
-        {
-            currentIndex = songs.size()-1;
-        }
         if(currentIndex > 0)
         {
             --currentIndex;
         }
-        
-
-        return "Skipping back and playing: " + songs.get(currentIndex);
+        return "Skipping back and playing: " + songs.get(currentIndex-1);
     }
 
     /**
